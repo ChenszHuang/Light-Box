@@ -98,11 +98,33 @@ h1 {
   animation: ZoomdanFade 1s;
 }
 
+.next {
+  background-image: url(../img/icon/next.png);
+}
+
+.prev {
+  background-image: url(../img/icon/prev.png);
+  left: 350px;
+}
+
+.overlay:target .next,
+.overlay:target .prev {
+  animation: ZoomdanFade 0.5s;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  margin-left: 15px;
+  margin-right: 15px;
+  background-size: cover;
+  transition: 1s;
+}
+
 .overlay:target .close {
   animation: SlideDownFade 1s forwards;
 }
 
-.overlay a {
+.overlay .close {
   position: absolute;
   margin-left: -20px;
   top: 10px;
